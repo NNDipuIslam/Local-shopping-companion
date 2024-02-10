@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "240851646568",
+    "project_id": "protibeshi-bazar",
+    "storage_bucket": "protibeshi-bazar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240851646568:android:06c51c9ceea5d7c6bbe3dd",
+        "android_client_info": {
+          "package_name": "com.example.prac2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD47dvFC9t31Iwj6KCHnshBKAxjttlG06E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
