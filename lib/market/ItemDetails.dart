@@ -92,7 +92,7 @@ Widget product(BuildContext context, int index) {
       children: [
         ListTile(
             title: Text(
-          "Lentils are small, lens-shaped seeds that come in various colors including green, brown, red, and black. They are a highly nutritious and versatile food that has been a staple in diets around the world forthousands of years.  for weight management.",
+          MarketItem[index][3],
           style: Theme.of(context).textTheme.bodyText1!,
         ))
       ],
@@ -112,7 +112,7 @@ Widget delivery(BuildContext context, int index) {
       children: [
         ListTile(
             title: Text(
-          "Lentils are small, lens-shaped seeds that come in various colors including green, brown, red, and black. They are a highly nutritious and versatile food that has been a staple in diets around the world forthousands of years.  for weight management.",
+          MarketItem[index][4],
           style: Theme.of(context).textTheme.bodyText1!,
         ))
       ],

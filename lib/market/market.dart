@@ -19,7 +19,7 @@ class Market extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [sell(), Search(context)],
+                  children: [sell(context), Search(context)],
                 ),
                 Divider(),
                 Text(
@@ -59,23 +59,28 @@ Widget FRow(BuildContext context) {
   );
 }
 
-Widget sell() {
-  return Container(
-    height: 40,
-    width: 180,
-    margin: EdgeInsets.all(5),
-    decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: Color.fromARGB(255, 230, 226, 226)),
-    child: Row(
-      children: [
-        SizedBox(width: 30),
-        Icon(Icons.edit_note),
-        Text(
-          "SELL",
-          style: TextStyle(fontSize: 25),
-        ),
-      ],
+Widget sell(BuildContext context) {
+  return InkWell(
+    onTap: () {
+      Navigator.pushNamed(context, "itemsell");
+    },
+    child: Container(
+      height: 40,
+      width: 180,
+      margin: EdgeInsets.all(5),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Color.fromARGB(255, 230, 226, 226)),
+      child: Row(
+        children: [
+          SizedBox(width: 30),
+          Icon(Icons.edit_note),
+          Text(
+            "SELL",
+            style: TextStyle(fontSize: 25),
+          ),
+        ],
+      ),
     ),
   );
 }

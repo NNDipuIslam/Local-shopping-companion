@@ -5,12 +5,14 @@ class MarketList extends StatelessWidget {
   final String ItemName;
   final String Price;
   final int Index;
-  const MarketList(
-      {super.key,
-      required this.ItemName,
-      required this.Price,
-      required this.ImagePath,
-      required this.Index});
+
+  const MarketList({
+    super.key,
+    required this.Index,
+    required this.ItemName,
+    required this.Price,
+    required this.ImagePath,
+  });
 
   @override
   Widget build(BuildContext context) {

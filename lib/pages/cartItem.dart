@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:prac2/pages/NavBar.dart';
-import 'package:prac2/pages/cart.dart';
 
 class Product {
   final String name;
@@ -211,6 +210,3 @@ class CartPage extends StatelessWidget {
     );
   }
 }
-
-
-

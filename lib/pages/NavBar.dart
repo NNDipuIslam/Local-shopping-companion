@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class navBar extends StatefulWidget {
   const navBar({super.key});
@@ -20,6 +21,7 @@ class _navBarState extends State<navBar> {
               decoration: BoxDecoration(color: Colors.pink)),
           ListTile(
             onTap: () {
+              Navigator.pop(context);
               Navigator.pushNamed(context, "profile");
             },
             leading: Icon(Icons.face),
@@ -30,6 +32,7 @@ class _navBarState extends State<navBar> {
           ),
           ListTile(
             onTap: () {
+              Navigator.pop(context);
               Navigator.pushNamed(context, "profile");
             },
             leading: Icon(Icons.list),
@@ -41,6 +44,7 @@ class _navBarState extends State<navBar> {
           Divider(),
           ListTile(
             onTap: () {
+              Navigator.pop(context);
               Navigator.pushNamed(context, "seller");
             },
             leading: Icon(Icons.sell),
@@ -53,6 +57,7 @@ class _navBarState extends State<navBar> {
           ),
           ListTile(
             onTap: () {
+              Navigator.pop(context);
               Navigator.pushNamed(context, "market");
             },
             leading: Icon(Icons.house),
@@ -73,6 +78,7 @@ class _navBarState extends State<navBar> {
               )),
           ListTile(
               onTap: () {
+                Navigator.pop(context);
                 Navigator.pushNamed(context, "settings");
               },
               leading: Icon(Icons.settings),
@@ -91,8 +97,10 @@ class _navBarState extends State<navBar> {
                           actions: [
                             TextButton(
                                 onPressed: () {
+                                  Navigator.pop(context);
                                   Navigator.pushNamedAndRemoveUntil(
                                       context, "login", (route) => false);
+                                  ;
                                 },
                                 child: Text("Yes")),
                             TextButton(

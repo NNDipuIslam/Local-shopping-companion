@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:prac2/bloc/sign_in_bloc/sign_in_bloc.dart';
 import 'package:prac2/firebase_options.dart';
 import 'package:prac2/market/ItemDetails.dart';
+import 'package:prac2/market/itemsell.dart';
+import 'package:prac2/market/market.dart';
 import 'package:prac2/market/market_cart.dart';
 import 'package:prac2/pages/NavBar.dart';
 import 'package:prac2/pages/cart.dart';
@@ -11,7 +13,6 @@ import 'package:prac2/pages/cartItem.dart';
 import 'package:prac2/pages/forgot.dart';
 import 'package:prac2/pages/home.dart';
 import 'package:prac2/pages/login.dart';
-import 'package:prac2/market/market.dart';
 import 'package:prac2/pages/profile.dart';
 import 'package:prac2/pages/search.dart';
 import 'package:prac2/pages/seller.dart';
@@ -49,7 +50,9 @@ class MyApp extends StatelessWidget {
           'market': (context) => Market(),
           'market_cart': (context) => Market_cart(),
           'settings': (context) => Settings(),
-          '/MarketItemDetails': (context) => itemMarket()
+          '/MarketItemDetails': (context) => itemMarket(),
+          'itemsell': (context) => itemsell(),
+          'backtomarket': (context) => Market()
         },
       ),
     );

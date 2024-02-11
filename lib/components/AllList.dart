@@ -17,23 +17,14 @@ final List itemName = [
 ];
 
 final List marketItem = [
-  ["Lentils", "100tk", "lib/images/lentil.jpg"],
-  ["Rice", "70tk", "lib/images/rice.jpg"],
-  ["Green Chilies", "50tk", "lib/images/greenchili.jpg"],
-  ["Soyabin Oil", "800tk", "lib/images/oil.jpg"],
-  ["Basmati rice", "250tk", "lib/images/Basmati-Rice.jpg"],
-  ["Kalai Dal", "280tk", "lib/images/kalai.jpg"],
+  ["Lentils", "100tk", "lib/images/lentil.jpg", "1", "2"],
+  ["Rice", "70tk", "lib/images/rice.jpg", "3", "4"],
+  ["Green Chilies", "50tk", "lib/images/greenchili.jpg", "5", "6"],
+  ["Soyabin Oil", "800tk", "lib/images/oil.jpg", "7", "8"],
+  ["Basmati rice", "250tk", "lib/images/Basmati-Rice.jpg", "hello", "hi"],
+  ["Kalai Dal", "280tk", "lib/images/kalai.jpg", "kalai", "dal"],
 ];
 
-final List marketItemDetails = [
-  ["Lentils", "100tk", "lib/images/lentil.jpg"],
-  ["Rice", "70tk", "lib/images/rice.jpg"],
-  ["Green Chilies", "50tk", "lib/images/greenchili.jpg"],
-  ["Soyabin Oil", "800tk", "lib/images/oil.jpg"],
-  ["Basmati rice", "250tk", "lib/images/Basmati-Rice.jpg"],
-  ["Kalai Dal", "280tk", "lib/images/kalai.jpg"],
-];
 get ShopName => shopName;
 get ItemName => itemName;
 get MarketItem => marketItem;
-get MarketItemDetails => marketItemDetails;
