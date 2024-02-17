@@ -18,6 +18,7 @@ import 'package:prac2/pages/search.dart';
 import 'package:prac2/pages/seller.dart';
 import 'package:prac2/pages/settings.dart';
 import 'package:prac2/pages/signup.dart';
+import 'package:prac2/pages/startNew.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -52,7 +53,8 @@ class MyApp extends StatelessWidget {
           'settings': (context) => Settings(),
           '/MarketItemDetails': (context) => itemMarket(),
           'itemsell': (context) => itemsell(),
-          'backtomarket': (context) => Market()
+          'backtomarket': (context) => Market(),
+          'start': (context) => startNew()
         },
       ),
     );

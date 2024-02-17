@@ -45,7 +45,7 @@ class _navBarState extends State<navBar> {
           ListTile(
             onTap: () {
               Navigator.pop(context);
-              Navigator.pushNamed(context, "seller");
+              Navigator.pushNamed(context, "start");
             },
             leading: Icon(Icons.sell),
             title: Text(
