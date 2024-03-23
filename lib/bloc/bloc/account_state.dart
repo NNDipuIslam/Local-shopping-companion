@@ -1,11 +1,6 @@
 part of 'account_bloc.dart';
 
-sealed class AccountState extends Equatable {
-  const AccountState();
-
-  @override
-  List<Object> get props => [];
-}
+sealed class AccountState {}
 
 final class AccountInitial extends AccountState {}
 

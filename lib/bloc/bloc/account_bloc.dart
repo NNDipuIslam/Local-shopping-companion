@@ -2,24 +2,24 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:prac2/repository/authentication/CreateAccount.dart';
+import 'package:prac2/repository/authentication/CreateAccountRepo.dart';
 import 'package:prac2/repository/authentication/CheckAccount.dart';
 part 'account_event.dart';
 part 'account_state.dart';
 
 class AccountBloc extends Bloc<AccountEvent, AccountState> {
   AccountBloc() : super(AccountInitial()) {
-    on<AccountEvent>((event, emit) {
-      on<CreateAccountEvent>(_createAccountEvent);
-      // on<PasswordVisibilityChangeEvent>(_passwordVisibilityChangeEvent);
-      on<CheckAccountEvent>(_checkAccountEvent);
-    });
+    on<CreateAccountEvent>(_createAccountEvent);
+    on<CheckAccountEvent>(_checkAccountEvent);
   }
 }
 
 FutureOr<void> _createAccountEvent(
     CreateAccountEvent event, Emitter<AccountState> emit) async {
-  bool success = await CreateAccountRepo.create(event.email, event.password);
+  print(1);
+  bool success = await CreateAccountRepo.create(
+      event.name, event.email, event.password, event.cpassword);
+  print(success);
   if (success == true) {
     emit(AccountCreateSuccessState(success: success));
   } else {

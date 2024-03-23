@@ -5,8 +5,6 @@ import 'package:prac2/bloc/bloc/account_bloc.dart';
 import 'package:prac2/controller/sign_up_controller.dart';
 import 'package:prac2/pages/login.dart';
 
-final controller = Get.put(SignUpController());
-
 class MyRegister extends StatefulWidget {
   const MyRegister({Key? key}) : super(key: key);
 
@@ -15,16 +13,15 @@ class MyRegister extends StatefulWidget {
 }
 
 class _MyRegisterState extends State<MyRegister> {
-  final controller = Get.put(SignUpController());
-  //AccountBloc accountBloc = AccountBloc();
+  AccountBloc accountBloc = AccountBloc();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
-  final TextEditingController c_passwordController = TextEditingController();
+  final TextEditingController cpasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    AccountBloc accountBloc = AccountBloc();
+    //   AccountBloc accountBloc = AccountBloc();
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -39,16 +36,33 @@ class _MyRegisterState extends State<MyRegister> {
         body: BlocListener<AccountBloc, AccountState>(
           bloc: accountBloc,
           listener: (context, state) {
-            /*  if (state is AccountCheckSuccessState) {
-              print(state.token);
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => MyLogin(),
-                  ));
-            }*/
+            if (state is AccountCreateSuccessState) {
+              showDialog(
+                  context: context,
+                  builder: (context) {
+                    return Container(
+                      child: AlertDialog(
+                        title: Text("Congartulation"),
+                        content: Text("You just creat a new account"),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  DialogRoute(
+                                    context: context,
+                                    builder: (context) => MyLogin(),
+                                  )); // Close the dialog
+                            },
+                            child: Text('OK'),
+                          ),
+                        ],
+                      ),
+                    );
+                  });
+            }
 
-            if (state is AccountCheckErrorState) {
+            if (state is AccountCreateErrorState) {
               showDialog(
                   context: context,
                   builder: (context) {
@@ -142,7 +156,9 @@ class _MyRegisterState extends State<MyRegister> {
                             SizedBox(
                               height: 30,
                             ),
+
                             //password
+
                             TextField(
                               controller: passwordController,
                               style: TextStyle(color: Colors.white),
@@ -173,7 +189,7 @@ class _MyRegisterState extends State<MyRegister> {
                             //same password check
 
                             TextField(
-                              controller: c_passwordController,
+                              controller: cpasswordController,
                               style: TextStyle(color: Colors.white),
                               obscureText: true,
                               decoration: InputDecoration(
@@ -215,18 +231,20 @@ class _MyRegisterState extends State<MyRegister> {
                                       color: Colors.white,
                                       onPressed: () {
                                         String name = nameController.text;
-                                        String email = nameController.text;
-                                        String password = nameController.text;
-                                        String c_password = nameController.text;
-                                        nameController.clear();
-                                        emailController.clear();
-                                        passwordController.clear();
-                                        c_passwordController.clear();
+                                        String email = emailController.text;
+                                        String password =
+                                            passwordController.text;
+                                        String cpassword =
+                                            cpasswordController.text;
+                                        //    nameController.clear();
+                                        //  emailController.clear();
+                                        //passwordController.clear();
+                                        //cpasswordController.clear();
                                         accountBloc.add(CreateAccountEvent(
                                             name: name,
                                             email: email,
                                             password: password,
-                                            cpassword: c_password));
+                                            cpassword: cpassword));
                                       },
                                       icon: Icon(
                                         Icons.arrow_forward,

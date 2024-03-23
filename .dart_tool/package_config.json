@@ -56,6 +56,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "dio",
+      "rootUri": "file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/dio-5.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "equatable",
       "rootUri": "file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/equatable-2.0.5",
       "packageUri": "lib/",
@@ -356,7 +362,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2024-03-23T07:50:54.033819Z",
+  "generated": "2024-03-23T08:48:11.708009Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }

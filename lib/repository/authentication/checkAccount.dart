@@ -6,24 +6,21 @@ class checkAccountRepo {
   static FutureOr<String?> check(String email, String password) async {
     var client = http.Client();
     var data = {
-      'address': email,
+      'email': email,
       'password': password,
     };
 
     try {
       var response = await client.post(
-        Uri.parse('https://api.mail.tm/token'),
+        Uri.parse('http://192.168.0.195:8000/api/login'),
         headers: {
-          'accept': 'application/json', // Specify accept header
           'Content-Type': 'application/json', // Specify JSON content type
         },
         body: json.encode(data),
       );
-
       if (response.statusCode == 200) {
         final Map<String, dynamic> responseData = json.decode(response.body);
-
-        final String? token = responseData['token'];
+        final String? token = responseData['data']['token'];
         return token;
       }
     } catch (e) {

@@ -33,6 +33,7 @@ dependencies:
   google_sign_in: ^6.1.6
   google_fonts: ^4.0.3
   bloc: 
+  dio:
   equatable:
   flutter_bloc:
   field_validation: ^0.0.1
