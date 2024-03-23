@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class navBar extends StatefulWidget {
-  const navBar({super.key});
+class NavBar extends StatefulWidget {
+  const NavBar({super.key});
 
   @override
-  State<navBar> createState() => _navBarState();
+  State<NavBar> createState() => _navBarState();
 }
 
-class _navBarState extends State<navBar> {
+class _navBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Drawer(

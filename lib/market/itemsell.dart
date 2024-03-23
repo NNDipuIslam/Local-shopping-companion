@@ -12,6 +12,11 @@ class _itemsellState extends State<itemsell> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: Center(
+            child: Text("Sell Your Own Product"),
+          ),
+        ),
         body: ListView(children: [
           SizedBox(
             height: 20,
@@ -43,11 +48,16 @@ class _itemsellState extends State<itemsell> {
                     ),
                     box(context, "Delivery Description", 70),
                     SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
-                    box(context, "Add Photos", 40),
-                    SizedBox(
-                      height: 30,
+                    ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(Icons.image),
+                      label: Text('Choose Image'),
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.blueGrey,
+                        onPrimary: Colors.white,
+                      ),
                     ),
                   ],
                 ),
@@ -57,20 +67,20 @@ class _itemsellState extends State<itemsell> {
           SizedBox(
             height: 20,
           ),
-          Center(
-            child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                  Navigator.pushNamed(context, "backtomarket");
-                },
-                child: Text(
-                  "Submit",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                )),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, "market");
+            },
+            child: Text('Upload product to market place'),
+            style: ElevatedButton.styleFrom(
+              primary: Colors.blue,
+              onPrimary: Colors.white,
+              padding: EdgeInsets.symmetric(vertical: 15),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
           ),
         ]),
       ),

@@ -32,17 +32,13 @@ dependencies:
     sdk: flutter
   google_sign_in: ^6.1.6
   google_fonts: ^4.0.3
-  bloc: ^8.0.2
+  bloc: 
   equatable:
   flutter_bloc:
   field_validation: ^0.0.1
-  firebase_auth: ^4.15.0
-  firebase_core: ^2.24.0
-  stacked_firebase_auth: ^2.19.6
   get: ^4.6.1
-  
-  
-  
+  fluttertoast: ^8.2.4
+
   js: ^0.6.2
   carousel_slider: ^4.0.0
   provider:

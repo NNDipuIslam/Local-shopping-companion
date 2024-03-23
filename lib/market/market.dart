@@ -9,17 +9,24 @@ class Market extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: Center(child: Text("Market Place")),
+          actions: [
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, "market_cart");
+              },
+              child: Icon(Icons.shopping_cart),
+            )
+          ],
+        ),
         body: Container(
             margin: EdgeInsets.all(5),
             child: Column(
               children: [
-                FRow(context),
-                SizedBox(
-                  height: 30,
-                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [sell(context), Search(context)],
+                  children: [sell(context), search(context)],
                 ),
                 Divider(),
                 Text(
@@ -85,7 +92,7 @@ Widget sell(BuildContext context) {
   );
 }
 
-Widget Search(BuildContext context) {
+Widget search(BuildContext context) {
   return Container(
     height: 40,
     width: 180,

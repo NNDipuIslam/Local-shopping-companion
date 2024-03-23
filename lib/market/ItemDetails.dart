@@ -1,50 +1,72 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:prac2/components/AllList.dart';
+import 'package:prac2/market/market.dart';
 
-class itemMarket extends StatelessWidget {
-  const itemMarket({super.key});
+class ItemMarket extends StatelessWidget {
+  const ItemMarket({super.key});
 
   @override
   Widget build(BuildContext context) {
     final int index = ModalRoute.of(context)!.settings.arguments as int;
     return SafeArea(
         child: Scaffold(
+            appBar: AppBar(
+              title: Center(child: Text(MarketItem[index][0])),
+            ),
             body: Container(
-      margin: EdgeInsets.all(5),
-      child: ListView(
-        children: [
-          FRow(context, index),
-          SizedBox(
-            height: 20,
-          ),
-          CarouselSlider(
-            items: [
-              Container(
-                color: Colors.red,
-                child: Image(
-                    image: AssetImage(MarketItem[index][2]), fit: BoxFit.cover
-                    /*child: Container(
+              margin: EdgeInsets.all(5),
+              child: ListView(
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  CarouselSlider(
+                    items: [
+                      Container(
+                        color: Colors.red,
+                        child: Image(
+                            image: AssetImage(MarketItem[index][2]),
+                            fit: BoxFit.cover
+                            /*child: Container(
                     child: Image(
                       image: AssetImage(MarketItem[index][2]),
                       fit: BoxFit.cover,
                     ),
                   ),*/
+                            ),
+                      ),
+                    ],
+                    options: CarouselOptions(
+                        aspectRatio: 1.5,
+                        viewportFraction: 0.9,
+                        enlargeCenterPage: true,
+                        enlargeStrategy: CenterPageEnlargeStrategy.height),
+                  ),
+                  price(context, index),
+                  product(context, index),
+                  delivery(context, index),
+                  SizedBox(
+                    height: 100,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, "market");
+                    },
+                    child: Text('Buy This Product'),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.blue,
+                      onPrimary: Colors.white,
+                      padding: EdgeInsets.symmetric(vertical: 15),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
+                  ),
+                ],
               ),
-            ],
-            options: CarouselOptions(
-                aspectRatio: 1.5,
-                viewportFraction: 0.9,
-                enlargeCenterPage: true,
-                enlargeStrategy: CenterPageEnlargeStrategy.height),
-          ),
-          price(context, index),
-          product(context, index),
-          delivery(context, index),
-        ],
-      ),
-    )));
+            )));
   }
 }
 

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:prac2/pages/NavBar.dart';
 
-class search extends StatelessWidget {
-  const search({super.key});
+class Search extends StatelessWidget {
+  const Search({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: navBar(),
+      drawer: NavBar(),
       body: Expanded(
         child: Container(
             child:

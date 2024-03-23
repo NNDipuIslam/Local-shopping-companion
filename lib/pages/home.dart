@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:prac2/pages/shoplist.dart';
+import 'package:prac2/components/shoplist.dart';
 import 'package:prac2/components/AllList.dart';
 import 'package:prac2/pages/NavBar.dart';
+import 'package:prac2/pages/cartItem.dart';
 
 class MyHome extends StatelessWidget {
   const MyHome({super.key});
@@ -10,22 +11,22 @@ class MyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: navBar(),
+      drawer: NavBar(),
       appBar: appbar(context),
       body: Container(
-         margin: EdgeInsets.all(12),
-        child:Column(
-          children: [
-            Text("All Shops", style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold
-                  ),),
-            SizedBox(height: 5,),
-            
-            ShopList(context),
-          ],
-        )
-      ),
+          margin: EdgeInsets.all(12),
+          child: Column(
+            children: [
+              Text(
+                "All Shops",
+                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              ShopList(context),
+            ],
+          )),
     );
   }
 
@@ -40,7 +41,8 @@ class MyHome extends StatelessWidget {
             icon: Icon(Icons.search)),
         IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, "cart");
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => insideShop()));
             },
             icon: Icon(Icons.shopping_cart))
       ],
@@ -63,7 +65,7 @@ Widget FRow(BuildContext context) {
   ]);
 }
 
-Widget Search(BuildContext context) {
+Widget search(BuildContext context) {
   return Expanded(
     child: Container(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -82,13 +84,13 @@ Widget Search(BuildContext context) {
 }
 
 Widget ShopList(BuildContext context) {
-  return  Container(
+  return Container(
     child: Expanded(
       child: GridView.builder(
         shrinkWrap: true,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 1, childAspectRatio: 1.6),
-        itemCount: shopName.length,
+        itemCount: ShopName.length,
         itemBuilder: (context, int index) {
           return MyShop(
             shopName: ShopName[index][0],
