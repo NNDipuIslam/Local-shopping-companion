@@ -9,15 +9,16 @@ class checkAccountRepo {
       'email': email,
       'password': password,
     };
-
+    print(1);
     try {
       var response = await client.post(
-        Uri.parse('http://192.168.0.195:8000/api/login'),
+        Uri.parse('http://192.168.0.193:8000/api/login'),
         headers: {
           'Content-Type': 'application/json', // Specify JSON content type
         },
         body: json.encode(data),
       );
+      print(response.body.toString());
       if (response.statusCode == 200) {
         final Map<String, dynamic> responseData = json.decode(response.body);
         final String? token = responseData['data']['token'];

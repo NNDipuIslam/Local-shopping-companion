@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 part of 'account_bloc.dart';
 
 sealed class AccountEvent {}
@@ -23,3 +24,20 @@ class CheckAccountEvent extends AccountEvent {
     required this.password,
   });
 }
+
+class StartNewBusiness extends AccountEvent {
+  String ShopName;
+  String ShopLocation;
+  String ShopType;
+  String PhoneNumber;
+  File image;
+  StartNewBusiness({
+    required this.ShopName,
+    required this.ShopLocation,
+    required this.ShopType,
+    required this.PhoneNumber,
+    required this.image,
+  });
+}
+
+class geBusiness extends AccountEvent {}

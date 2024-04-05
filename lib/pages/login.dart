@@ -30,6 +30,7 @@ class _MyLoginState extends State<MyLogin> {
             bloc: accountBloc,
             listener: (context, state) {
               if (state is AccountCheckSuccessState) {
+                print(state.token);
                 Navigator.push(
                     context,
                     DialogRoute(

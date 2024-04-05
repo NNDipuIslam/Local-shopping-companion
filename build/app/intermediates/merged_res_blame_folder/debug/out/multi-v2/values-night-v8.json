@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.prac2.app-mergeDebugResources-14:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.prac2.app-mergeDebugResources-25:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\project\\prac2\\android\\app\\src\\main\\res\\values-night\\styles.xml",

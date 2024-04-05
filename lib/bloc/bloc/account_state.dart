@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 part of 'account_bloc.dart';
 
 sealed class AccountState {}
@@ -33,4 +34,18 @@ class PasswordVisibilityChangeState extends AccountState {
   final bool isPasswordVisible;
 
   PasswordVisibilityChangeState(this.isPasswordVisible);
+}
+
+class BusinessCreateErrorState extends AccountState {
+  bool success;
+  BusinessCreateErrorState({
+    required this.success,
+  });
+}
+
+class BusinessCreateSuccessState extends AccountState {
+  bool success;
+  BusinessCreateSuccessState({
+    required this.success,
+  });
 }

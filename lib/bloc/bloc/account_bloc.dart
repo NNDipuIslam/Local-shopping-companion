@@ -1,9 +1,12 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:prac2/repository/authentication/CreateAccountRepo.dart';
 import 'package:prac2/repository/authentication/CheckAccount.dart';
+import 'package:prac2/repository/authentication/NewBusiness.dart';
 part 'account_event.dart';
 part 'account_state.dart';
 
@@ -11,6 +14,7 @@ class AccountBloc extends Bloc<AccountEvent, AccountState> {
   AccountBloc() : super(AccountInitial()) {
     on<CreateAccountEvent>(_createAccountEvent);
     on<CheckAccountEvent>(_checkAccountEvent);
+    on<StartNewBusiness>(_startNewBusiness);
   }
 }
 
@@ -34,5 +38,17 @@ FutureOr<void> _checkAccountEvent(
     emit(AccountCheckSuccessState(token: token));
   } else {
     emit(AccountCheckErrorState());
+  }
+}
+
+FutureOr<void> _startNewBusiness(
+    StartNewBusiness event, Emitter<AccountState> emit) async {
+  bool success = await NewBusiness.create(event.ShopName, event.ShopLocation,
+      event.ShopType, event.PhoneNumber, event.image);
+  print(success);
+  if (success == true) {
+    emit(BusinessCreateSuccessState(success: success));
+  } else {
+    emit(BusinessCreateErrorState(success: success));
   }
 }

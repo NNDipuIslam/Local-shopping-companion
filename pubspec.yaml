@@ -39,6 +39,7 @@ dependencies:
   field_validation: ^0.0.1
   get: ^4.6.1
   fluttertoast: ^8.2.4
+  image_picker:
 
   js: ^0.6.2
   carousel_slider: ^4.0.0
