@@ -1,28 +1,30 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:prac2/components/cart_model.dart';
 import 'package:provider/provider.dart';
 
-class itemsTile extends StatefulWidget {
-  String itemName;
-  String itemPrice;
-  String itemImage;
-  Color color;
-  int index;
+class GroceryItemTile extends StatefulWidget {
+  final String itemName;
+  final String itemPrice;
+  final String imagePath;
+  final int id;
 
-  itemsTile(
-      {super.key,
-      required this.itemName,
-      required this.itemPrice,
-      required this.itemImage,
-      required this.color,
-      required this.index});
+  GroceryItemTile({
+    Key? key,
+    required this.itemName,
+    required this.itemPrice,
+    required this.imagePath,
+    required this.id,
+  }) : super(key: key);
 
   @override
-  State<itemsTile> createState() => _itemsTileState();
+  State<GroceryItemTile> createState() => _GroceryItemTileState();
 }
 
-class _itemsTileState extends State<itemsTile> {
-  int value = 0;
+class _GroceryItemTileState extends State<GroceryItemTile> {
+  int quantity = 0; // Moved quantity here to maintain state
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,66 +32,82 @@ class _itemsTileState extends State<itemsTile> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          color: widget.color,
+          color: Colors.amber,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // item image
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40.0),
-              child: Image.asset(
-                widget.itemImage,
+              child: Image.network(
+                widget.imagePath,
                 height: 64,
               ),
             ),
 
             // item name
-            Column(
-              children: [
-                Text(
-                  widget.itemName,
-                  style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  '\$' + widget.itemPrice,
-                  style: TextStyle(
-                      color: Colors.black.withOpacity(0.5), fontSize: 20),
-                ),
-              ],
+            Text(
+              widget.itemName,
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+            Text(
+              widget.itemPrice,
+              style: TextStyle(
+                fontSize: 16,
+              ),
             ),
             Row(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                InkWell(
-                  child: Icon(Icons.remove),
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     setState(() {
-                      if (value < 1) {
-                        value = 0;
-                      } else {
-                        value--;
-                      }
+                      if (quantity > 0) quantity--;
                     });
-
-                    Provider.of<CartModel>(context, listen: false)
-                        .RemoveItemFromCart(widget.index);
                   },
+                  icon: Icon(Icons.remove),
                 ),
-                Text(value.toString()),
-                InkWell(
-                    child: Icon(Icons.add),
-                    onTap: () {
-                      setState(() {
-                        value++;
-                      });
-                      Provider.of<CartModel>(context, listen: false)
-                          .addItemToCart(widget.index);
-                    }),
+                Text(
+                  quantity.toString(),
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      quantity++;
+                    });
+                  },
+                  icon: Icon(Icons.add),
+                ),
               ],
             ),
+            MaterialButton(
+              onPressed: () {
+                List<String> itemData = [
+                  widget.itemName,
+                  widget.itemPrice,
+                  widget.imagePath,
+                  quantity.toString(),
+                  widget.id.toString(),
+                ];
+                Provider.of<CartModel>(context, listen: false)
+                    .addItemToCart(itemData);
+              },
+              //  color: color,
+              child: Text(
+                'ADD TO CART',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )
           ],
         ),
       ),

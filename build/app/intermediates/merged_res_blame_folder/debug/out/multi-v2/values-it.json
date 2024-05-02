@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.prac2.app-mergeDebugResources-25:/values-it/values-it.xml",
+            "outputFile": "com.example.prac2.app-mergeDebugResources-29:/values-it/values-it.xml",
             "map": [
                 {
                     "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\bcfed2d0560073f3317101d3b9d54358\\transformed\\jetified-play-services-base-18.0.1\\res\\values-it\\values.xml",
@@ -47,11 +47,28 @@
                         "endOffsets": "148,250,349,451,560,667,797,898"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,27",
+                        "startLines": "2,3,4,5,6,7,8,31",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,354,456,565,672,3024",
+                        "startOffsets": "55,153,255,354,456,565,672,3435",
                         "endColumns": "97,101,98,101,108,106,129,100",
-                        "endOffsets": "148,250,349,451,560,667,797,3120"
+                        "endOffsets": "148,250,349,451,560,667,797,3531"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\379aa3ee47f3cd5b982c847b21695a12\\transformed\\browser-1.4.0\\res\\values-it\\values-it.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,155,253,363",
+                        "endColumns": "99,97,109,102",
+                        "endOffsets": "150,248,358,461"
+                    },
+                    "to": {
+                        "startLines": "27,28,29,30",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3024,3124,3222,3332",
+                        "endColumns": "99,97,109,102",
+                        "endOffsets": "3119,3217,3327,3430"
                     }
                 }
             ]

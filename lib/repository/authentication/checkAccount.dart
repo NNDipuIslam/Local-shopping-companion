@@ -12,7 +12,7 @@ class checkAccountRepo {
     print(1);
     try {
       var response = await client.post(
-        Uri.parse('http://192.168.0.193:8000/api/login'),
+        Uri.parse('http://192.168.63.70:8000/api/login'),
         headers: {
           'Content-Type': 'application/json', // Specify JSON content type
         },

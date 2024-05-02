@@ -15,7 +15,7 @@ class CreateAccountRepo {
     };
     try {
       var response = await http.post(
-        Uri.parse('http://192.168.0.193:8000/api/register'),
+        Uri.parse('http://192.168.63.70:8000/api/register'),
         headers: {
           'Content-Type': 'application/json', // Set Content-Type header
         },

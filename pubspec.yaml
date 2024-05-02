@@ -31,7 +31,9 @@ dependencies:
   flutter:
     sdk: flutter
   google_sign_in: ^6.1.6
+  shared_preferences:
   google_fonts: ^4.0.3
+  firebase_auth:
   bloc: 
   dio:
   equatable:

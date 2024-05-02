@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.prac2.app-mergeDebugResources-25:/values-kk/values-kk.xml",
+            "outputFile": "com.example.prac2.app-mergeDebugResources-29:/values-kk/values-kk.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\379aa3ee47f3cd5b982c847b21695a12\\transformed\\browser-1.4.0\\res\\values-kk\\values-kk.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,155,259,367",
+                        "endColumns": "99,103,107,104",
+                        "endOffsets": "150,254,362,467"
+                    },
+                    "to": {
+                        "startLines": "27,28,29,30",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "2986,3086,3190,3298",
+                        "endColumns": "99,103,107,104",
+                        "endOffsets": "3081,3185,3293,3398"
+                    }
+                },
                 {
                     "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\fa21b4ec7e7dc682913b9c331c162f13\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-kk\\values.xml",
                     "from": {
@@ -30,11 +47,11 @@
                         "endOffsets": "145,247,349,452,556,653,764,865"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,27",
+                        "startLines": "2,3,4,5,6,7,8,31",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,150,252,354,457,561,658,2986",
+                        "startOffsets": "55,150,252,354,457,561,658,3403",
                         "endColumns": "94,101,101,102,103,96,110,100",
-                        "endOffsets": "145,247,349,452,556,653,764,3082"
+                        "endOffsets": "145,247,349,452,556,653,764,3499"
                     }
                 },
                 {

@@ -3,6 +3,12 @@ part of 'account_bloc.dart';
 
 sealed class AccountEvent {}
 
+class BusinessInitialFetchEvent extends AccountEvent {}
+
+class ProductInitialFetchEvent extends AccountEvent {}
+
+class ItemInitialFetchEvent extends AccountEvent {}
+
 class CreateAccountEvent extends AccountEvent {
   final String name;
   final String email;
@@ -40,4 +46,36 @@ class StartNewBusiness extends AccountEvent {
   });
 }
 
-class geBusiness extends AccountEvent {}
+class GetBusiness extends AccountEvent {}
+
+class NewProduct extends AccountEvent {
+  String ItemName;
+  String ItemPrice;
+  File image;
+  String ProductInformation;
+  String DeliveryInformation;
+  NewProduct({
+    required this.ItemName,
+    required this.ItemPrice,
+    required this.image,
+    required this.ProductInformation,
+    required this.DeliveryInformation,
+  });
+}
+
+class GetProducts extends AccountEvent {}
+
+class GetItems extends AccountEvent {}
+
+class NewItem extends AccountEvent {
+  int shopId;
+  String ItemName;
+  String ItemPrice;
+  File image;
+  NewItem({
+    required this.shopId,
+    required this.ItemName,
+    required this.ItemPrice,
+    required this.image,
+  });
+}

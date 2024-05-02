@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -96,7 +98,9 @@ class _navBarState extends State<NavBar> {
                           title: Text("Are you sure to log out?"),
                           actions: [
                             TextButton(
-                                onPressed: () {
+                                onPressed: () async {
+                                  await GoogleSignIn().signOut();
+                                  FirebaseAuth.instance.signOut();
                                   Navigator.pop(context);
                                   Navigator.pushNamedAndRemoveUntil(
                                       context, "login", (route) => false);

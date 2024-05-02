@@ -1,0 +1,60 @@
+{
+   "checksum": "3e05afcdecd270088646f45a79bcedde",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13273677947454492",
+            "date_last_used": "0",
+            "guid": "c620d2b9-2339-441d-a37e-982f38b69d7d",
+            "id": "7",
+            "name": "ques 1.pdf",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "file:///G:/Dipu/edu/2-1/Data%20structur/ques%201.pdf"
+         }, {
+            "date_added": "13277807022095530",
+            "date_last_used": "0",
+            "guid": "2df5450f-704c-4726-bd72-45bb0f7f72f6",
+            "id": "8",
+            "name": "Brian Arnold_ Steve Woolley_ Penny Johnson - Edexcel International GCSE (9-1) Physics Student Book (2017, Pearson Education Limited) - libgen.lc.pdf",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "file:///G:/Dipu/edu/tution/em/Brian%20Arnold_%20Steve%20Woolley_%20Penny%20Johnson%20-%20Edexcel%20International%20GCSE%20(9-1)%20Physics%20Student%20Book%20(2017,%20Pearson%20Education%20Limited)%20-%20libgen.lc.pdf"
+         } ],
+         "date_added": "13358543372823528",
+         "date_last_used": "0",
+         "date_modified": "13277807022095530",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favorites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13358543372823531",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13358543372823533",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favorites",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CkEKHgiIgQISCFGlgBaPAQAAKg4QABgBIAAoBjAAOABAABIAKhhCeUFCWWR5Y0V3MnlpNzJwNCtKR01RPT1IA6AGDBKnAQgHEqIBChxVYlpNRFFPUUhmMXBNaVVkc3NRZjVpcCtMRDQ9EiRjNjIwZDJiOS0yMzM5LTQ0MWQtYTM3ZS05ODJmMzhiNjlkN2QYACAAKAAwg++UobUvOO6s1e/lL0DurNXv5S9KHGthd3VwYXJRZU55eTZjbVI0NW56T2pVKytOUT1aHiIcVFdQSFliK2IvcjltOElVMmYvVnVNcFk0MmRjPWV3cGyjEqgBCAgSowEKHGtIdCt0SUNMNGVUWENRRGFoWDZDSkZlak4rST0SJDJkZjU0NTBmLTcwNGMtNDcyNi1iZDcyLTQ1YmIwZjdmNzJmNhgAIAAoADC/h4fSxC84k7vV7+UvQJO71e/lL0ocNk83QTR3dkpLUW5TQmZCN09nRmZyNi9XK1o4PVofIh2qTENlUkRTbGJpQWF2bFNpQjFNUlRkbm5uWWtzPWV3cGyjEokBCAIShAEKHFljU1RvbnZFU1B3cUNzNEwyY3JWaHY2OEw5OD0SJDFmYjQ2YjAwLTg3YWMtNWY2Ny1iZTdjLWJjNWM0OTczNjNlNxgAIAAoADCJipHBsTA4r4zV7+UvQK+M1e/lL0ocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAAASiQEIARKEAQoceXhKLzZmdmtlY3I3a3A1RVF6QjR0V0xwZGJFPRIkYTI4ZTU2MWYtNTIyZC01Y2M0LTk0OGYtNmM3NDM1ZDBiYjk1GAAgACgAMImKkcGxMDjwitXv5S9A8IrV7+UvShxhUkNXTGdoRjliNUlucUtJRHZ1Si9qdlFrRmM9WgBlAAAAABKJAQgDEoQBChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EiQ5YmMyNmM5YS0wMGRlLTVkMzAtYTAxYy1lNGZkZjk3YjQ1NWYYACAAKAAwiYqRwbEwOPKQ1e/lL0DykNXv5S9KHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1aAGUAAAAAMAA4AA==",
+   "version": 1
+}

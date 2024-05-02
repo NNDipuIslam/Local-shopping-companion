@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.prac2.app-mergeDebugResources-25:/values-et/values-et.xml",
+            "outputFile": "com.example.prac2.app-mergeDebugResources-29:/values-et/values-et.xml",
             "map": [
                 {
                     "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\fa21b4ec7e7dc682913b9c331c162f13\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-et\\values.xml",
@@ -30,11 +30,28 @@
                         "endOffsets": "145,247,345,448,554,659,779,880"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,27",
+                        "startLines": "2,3,4,5,6,7,8,31",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,150,252,350,453,559,664,3002",
+                        "startOffsets": "55,150,252,350,453,559,664,3408",
                         "endColumns": "94,101,97,102,105,104,119,100",
-                        "endOffsets": "145,247,345,448,554,659,779,3098"
+                        "endOffsets": "145,247,345,448,554,659,779,3504"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\379aa3ee47f3cd5b982c847b21695a12\\transformed\\browser-1.4.0\\res\\values-et\\values-et.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,155,255,362",
+                        "endColumns": "99,99,106,98",
+                        "endOffsets": "150,250,357,456"
+                    },
+                    "to": {
+                        "startLines": "27,28,29,30",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3002,3102,3202,3309",
+                        "endColumns": "99,99,106,98",
+                        "endOffsets": "3097,3197,3304,3403"
                     }
                 },
                 {

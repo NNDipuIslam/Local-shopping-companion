@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.prac2.app-mergeDebugResources-25:/values-lv/values-lv.xml",
+            "outputFile": "com.example.prac2.app-mergeDebugResources-29:/values-lv/values-lv.xml",
             "map": [
                 {
                     "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\fa21b4ec7e7dc682913b9c331c162f13\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-lv\\values.xml",
@@ -47,11 +47,28 @@
                         "endOffsets": "148,250,350,451,558,666,781,882"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,27",
+                        "startLines": "2,3,4,5,6,7,8,31",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,355,456,563,671,3090",
+                        "startOffsets": "55,153,255,355,456,563,671,3510",
                         "endColumns": "97,101,99,100,106,107,114,100",
-                        "endOffsets": "148,250,350,451,558,666,781,3186"
+                        "endOffsets": "148,250,350,451,558,666,781,3606"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\379aa3ee47f3cd5b982c847b21695a12\\transformed\\browser-1.4.0\\res\\values-lv\\values-lv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,158,257,373",
+                        "endColumns": "102,98,115,101",
+                        "endOffsets": "153,252,368,470"
+                    },
+                    "to": {
+                        "startLines": "27,28,29,30",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3090,3193,3292,3408",
+                        "endColumns": "102,98,115,101",
+                        "endOffsets": "3188,3287,3403,3505"
                     }
                 }
             ]

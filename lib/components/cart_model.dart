@@ -2,83 +2,64 @@ import 'package:flutter/material.dart';
 
 class CartModel extends ChangeNotifier {
   // list of items on sale
-  final List _shopItems = const [
-    // [ itemName, itemPrice, imagePath, color ]
-    [
-      "Lentil",
-      "200",
-      "lib/images/lentil.jpg",
-      Color.fromARGB(255, 125, 214, 128)
-    ],
-    [
-      "Green Chili",
-      "50",
-      "lib/images/greenchili.jpg",
-      Color.fromARGB(255, 228, 220, 152)
-    ],
-    [
-      "Basmati Rice",
-      "280",
-      "lib/images/rice.jpg",
-      Color.fromARGB(255, 161, 115, 97)
-    ],
-    [
-      "Soyabin",
-      "800",
-      "lib/images/oil.jpg",
-      Color.fromARGB(255, 112, 155, 190)
-    ],
-    [
-      "Kalai Dal",
-      "280",
-      "lib/images/kalai.jpg",
-      Color.fromARGB(255, 98, 101, 104)
-    ],
-    [
-      "Onion",
-      "100",
-      "lib/images/onion.jpg",
-      Color.fromARGB(255, 163, 144, 110)
-    ],
-  ];
 
   // list of cart items
-  List _cartItems = [];
-  List<List<dynamic>> uniqueValuesWithCounts = [];
   get cartItems => _cartItems;
 
-  get shopItems => _shopItems;
-
   // add item to cart
-  void addItemToCart(int index) {
-    _cartItems.add(_shopItems[index]);
-    notifyListeners();
-  }
+  List<Map<String, dynamic>> _cartItems = [];
 
-  void printList() {
-    print(uniqueValuesWithCounts);
+  void addItemToCart(List<String> itemData) {
+    // Extracting item data
+    String itemName = itemData[0];
+    String itemPrice = itemData[1];
+    String imagePath = itemData[2];
+    int quantity = int.parse(itemData[3]);
+    int id = int.parse(itemData[4]);
+
+    // Check if an item with the same name and id exists
+    bool itemExists = false;
+    for (Map<String, dynamic> item in _cartItems) {
+      if (item['itemName'] == itemName && item['id'] == id) {
+        // Update the quantity if the item exists
+        item['quantity'] = quantity.toString(); // Convert to string
+        itemExists = true;
+        break;
+      }
+    }
+
+    // If the item doesn't exist, add it to the list
+    if (!itemExists) {
+      Map<String, dynamic> newItem = {
+        'itemName': itemName,
+        'itemPrice': itemPrice,
+        'imagePath': imagePath,
+        'quantity': quantity.toString(), // Convert to string
+        'id': id.toString(), // Convert to string
+      };
+      _cartItems.add(newItem);
+    }
+
+    // Notify listeners that the cart items have changed
+    notifyListeners();
   }
 
   // remove item from cart
-  void minusItemFromCart(int index, int value) {
-    if (value > 0) {
-      _cartItems.removeAt(index);
-    } else
-      _cartItems.clear();
-    notifyListeners();
-  }
-
-  void RemoveItemFromCart(int index) {
+  void removeItemFromCart(int index) {
     _cartItems.removeAt(index);
-
     notifyListeners();
   }
 
   // calculate total price
   String calculateTotal() {
     double totalPrice = 0;
-    for (int i = 0; i < cartItems.length; i++) {
-      totalPrice += double.parse(cartItems[i][1]);
+    for (int i = 0; i < _cartItems.length; i++) {
+      String priceValue = _cartItems[i]
+          ['itemPrice']; // Accessing 'itemPrice' instead of 'price'
+      String quantityValue = _cartItems[i]['quantity'];
+      double price = double.parse(priceValue);
+      int quantity = int.parse(quantityValue);
+      totalPrice += price * quantity;
     }
     return totalPrice.toStringAsFixed(2);
   }
